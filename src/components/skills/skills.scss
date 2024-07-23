@@ -1,0 +1,109 @@
+@import "../../app.scss";
+
+.Skills {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 15%;
+  // align-items: center;
+  justify-content: center;
+  color: white;
+  background-image: url("/stars.png");
+  z-index: -1;
+  overflow: hidden;
+
+  .carousel {
+    color: inherit;
+    cursor: pointer;
+    overflow: hidden;
+    // background: #c86e6e;
+    z-index: 2;
+    .inner-carousel {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // background: #6a5e5e;
+      gap: 40px;
+
+      @include mobile {
+        gap: 20px;
+      }
+
+      .item {
+        min-height: 30rem;
+        min-width: 20rem;
+        padding: 40px;
+        // background-color: #ba70ef;
+        border-radius: 2rem;
+        border: 1px solid white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        @include mobile {
+          min-height: 25rem;
+          min-width: 18rem;
+          padding: 30px;
+        }
+
+        h3 {
+          font-size: 25px;
+
+          @include mobile {
+            font-size: 20px;
+          }
+        }
+        .icon {
+          font-size: 3rem;
+        }
+
+        .skillList {
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 3rem;
+          gap: 5px;
+          button 
+          {
+            background-color: transparent;
+            border: 1px solid white;
+            padding: 10px 20px;
+            color: inherit;
+            border-radius: 50px;
+            font-size: 1rem;
+
+            @include mobile {
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+    .arrow {
+      position: absolute;
+      top: 50%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 3;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      &.left-arrow {
+        left: 10px;
+      }
+
+      &.right-arrow {
+        right: 10px;
+      }
+    }
+  }
+}

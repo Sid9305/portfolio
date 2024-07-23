@@ -1,0 +1,93 @@
+import "./skills.scss";
+import { motion } from "framer-motion";
+
+const Skills = () => {
+  return (
+    <motion.div className="skills">
+      <motion.div className="listContainer">
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h2>Web Development</h2>
+          <button className="skillsbtn">HTML</button>
+          <button className="skillsbtn">TAILWIND CSS</button>
+          <button className="skillsbtn">JS</button>
+          <button className="skillsbtn">React Js</button>
+          <button>Go</button>
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h2>App Development</h2>
+          <button className="skillsbtn">Flutter</button>
+          <button className="skillsbtn">Android</button>
+          <button className="skillsbtn">Figma</button>
+          <button>Go</button>
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h2>Python</h2>
+          <button className="skillsbtn">Django</button>
+          <button className="skillsbtn">Numpy</button>
+          <button className="skillsbtn">Pandas</button>
+          <button className="skillsbtn">Sci-kit</button>
+          <button>Go</button>
+        </motion.div>
+        <motion.div
+          className="box"
+          whileHover={{ background: "lightgray", color: "black" }}
+        >
+          <h2>Others</h2>
+          <button className="skillsbtn">Solidity</button>
+          <button className="skillsbtn">My Sql</button>
+          <button className="skillsbtn">Git Version</button>
+          <button>Go</button>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  );
+};
+
+export default Skills;
+
+
+// scss
+
+.skills {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+  .listContainer {
+    height: 50%;
+    display: flex;
+    max-width: 1366px;
+    margin-top: 15%;
+    margin-bottom: 20%;
+    justify-content: center;
+    .box{
+        padding: 50px;
+        
+        border: 0.5px solid gray;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        width: 50%;
+
+        button{
+            padding: 10px;
+            background-color: orange;
+            border: none;
+            cursor: pointer;
+        }
+    }
+  }
+}

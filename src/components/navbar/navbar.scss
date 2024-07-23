@@ -1,0 +1,47 @@
+@import "../../app.scss";
+
+.navbar {
+  height: 100px;
+  .wrapper {
+    max-width: 1366px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // background-color: aqua;
+    height: 100%;
+
+    @include tablet {
+      margin: 0 10%;
+      font-size: 1.5rem;
+    }
+
+    @include mobile {
+      justify-content: flex-end;
+    }
+
+    span {
+      font-weight: bold;
+      // margin: 100px;
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .social {
+      display: flex;
+      gap: 20px;
+
+      .icon {
+        width: 2rem;
+        height: 2rem;
+        margin: 10px;
+
+        @include mobile {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+}
