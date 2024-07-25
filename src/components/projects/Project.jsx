@@ -47,7 +47,8 @@ const Project = () => {
                 <button
                   key={i}
                   style={{
-                    backgroundColor: hovered === index ? "white" : project.backgroundColor,
+                    backgroundColor:
+                      hovered === index ? "white" : project.backgroundColor,
                   }}
                 >
                   {tech}
@@ -62,7 +63,9 @@ const Project = () => {
           </motion.div>
         ))}
       </motion.div>
-      <button className="viewbtn viewmorebtn">View More</button>
+      <button className="viewbtn viewmorebtn">
+        <a href="https://github.com/Sid9305/">View More</a>
+      </button>
     </motion.div>
   );
 };

@@ -12,7 +12,7 @@ const projectData = [
     tech: ["Android", "Firebase", "Google Maps API"],
     description:
       "A mobile app that helps users find emergency services near them using GPS location and real-time updates.",
-    url: "https://github.com/Adhira-S/Emergency-SOS-Tracker",
+    url: "https://github.com/Sid9305/",
     backgroundColor: "#bb84aa",
   },
   {
@@ -20,7 +20,7 @@ const projectData = [
     tech: ["Flask", "BootStrap", "Vanilla JS","SciKit-Learn"],
     description:
       "Created own dataset and implemented ML Algorithm to predict the outcome and launched it in a website using Flask.",
-    url: "https://github.com/Adhira-S/Emergency-SOS-Tracker",
+    url: "https://github.com/Sid9305/",
     backgroundColor: "#5c63a1",
   },
 ];
