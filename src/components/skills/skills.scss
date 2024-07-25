@@ -6,17 +6,19 @@
   display: flex;
   flex-direction: column;
   padding: 0 15%;
-  // align-items: center;
   justify-content: center;
   color: white;
   background-image: url("/stars.png");
-  z-index: -1;
+  z-index: 1;
   overflow: hidden;
+  // flex-wrap: nowrap;
 
   .carousel {
     color: inherit;
     cursor: pointer;
     overflow: hidden;
+    display: flex;
+    align-items: flex-start;
     // background: #c86e6e;
     z-index: 2;
     .inner-carousel {
@@ -37,8 +39,6 @@
         // background-color: #ba70ef;
         border-radius: 2rem;
         border: 1px solid white;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-          0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         @include mobile {
           min-height: 25rem;
@@ -62,8 +62,7 @@
           flex-wrap: wrap;
           margin-top: 3rem;
           gap: 5px;
-          button 
-          {
+          button {
             background-color: transparent;
             border: 1px solid white;
             padding: 10px 20px;
@@ -76,33 +75,6 @@
             }
           }
         }
-      }
-    }
-    .arrow {
-      position: absolute;
-      top: 50%;
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 3rem;
-      height: 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      z-index: 3;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.8);
-      }
-
-      &.left-arrow {
-        left: 10px;
-      }
-
-      &.right-arrow {
-        right: 10px;
       }
     }
   }

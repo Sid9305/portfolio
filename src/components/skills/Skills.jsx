@@ -8,37 +8,41 @@ const Skills = () => {
   const carousel = useRef(null);
 
   useEffect(() => {
-    if (carousel.current) {
-      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-    }
-  }, []);
+    console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
+    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  });
 
   return (
-    <div className="Skills">
-      <motion.div
-        ref={carousel}
-        className="carousel"
-        whileTap={{ cursor: "grabbing" }}
-      >
+    <>
+      <div className="Skills">
         <motion.div
-          drag="x"
-          dragConstraints={{ right: 0, left: -width }}
-          className="inner-carousel"
+          ref={carousel}
+          className="carousel"
+          whileTap={{ cursor: "grabbing" }}
         >
-          {data.map((d, index) => (
-            <motion.div className="item" key={index}>
-              <div className="icon">{d.icon}</div>
-              <h3>{d.name}</h3>
-              <div className="skillList">
-                {d.skills.map((skill, i) => (
-                  <button key={i}>{skill}</button>
-                ))}
-              </div>
-            </motion.div>
-          ))}
+          <motion.div
+            drag="x"
+            dragConstraints={{ right: 0, left: -width }}
+            className="inner-carousel"
+          >
+            {data.map((d, index) => {
+              return (
+                <motion.div className="item" key={index}>
+                  {/* <img src={d.icon} alt="" className="icon"/> */}
+                  <div className="icon">{d.icon}</div>
+                  <h3>{d.name}</h3>
+                  <div className="skillList">
+                    {d.skills.map((skill, i) => (
+                      <button key={i}>{skill}</button>
+                    ))}
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </div>
+      </div>
+    </>
   );
 };
 
