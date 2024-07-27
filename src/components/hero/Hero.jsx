@@ -48,7 +48,7 @@ const Hero = () => {
               whileHover={{ backgroundColor: "white", color: "black" }}
               whileTap={{ backgroundColor: "white", color: "black" }}
             >
-              <a href="https://drive.google.com/file/d/12EpBQvUalw4DJAHE3k_PXbl6ZOmJtMg2/view?usp=drive_link">
+              <a href="../../../public/New_Resume.pdf">
                 Resume
               </a>
             </motion.button>
@@ -56,8 +56,8 @@ const Hero = () => {
               variants={textVariants}
               whileHover={{ backgroundColor: "white", color: "black" }}
               whileTap={{ backgroundColor: "white", color: "black" }}
-            ><a href="mailto:siddhim1609@gmail.com">
-              Contact Me</a>
+            >
+              <a href="mailto:siddhim1609@gmail.com">Contact Me</a>
             </motion.button>
           </motion.div>
           <motion.img
