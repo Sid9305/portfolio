@@ -48,7 +48,7 @@ const Hero = () => {
               whileHover={{ backgroundColor: "white", color: "black" }}
               whileTap={{ backgroundColor: "white", color: "black" }}
             >
-              <a href="../../../public/New_Resume.pdf">
+              <a href="https://drive.google.com/file/d/12EpBQvUalw4DJAHE3k_PXbl6ZOmJtMg2/view?usp=drive_link">
                 Resume
               </a>
             </motion.button>
